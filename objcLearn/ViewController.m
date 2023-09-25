@@ -8,12 +8,25 @@
 #import "ViewController.h"
 
 @implementation ViewController
+- (IBAction)push:(NSButton *)sender {
+    sender.title = @"改變";
+    
+    _labeltext.stringValue  = [NSString stringWithFormat:@"%d", _display];
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
+    self.labeltext.stringValue = @"viewdidload after";
+    _display = func99();
+   
 }
+int func99(void) {
+   return 99;
+}
+
+
 
 
 - (void)setRepresentedObject:(id)representedObject {
